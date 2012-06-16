@@ -8,8 +8,8 @@
  * compilation command: mex -lgsl C_test.cpp
  */
 
-#include "mex.h"
-#include "/home/bogdan/C++/Chaos/NIST/Statistical_tests.cpp"
+#include <mex.h>
+#include "StatisticalTests.h"
 
 /*
  * The following functions are taken from IT++ library in order to ensure the interface
