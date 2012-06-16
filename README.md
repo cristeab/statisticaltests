@@ -19,3 +19,7 @@ compile in 'Debug' mode use:
 An executable 'statisticaltests' is created in the build folder.
 - install (optionally)
  'make install'
+- generate help (optionally)
+ 'make help'
+A folder 'html' is created in the build folder. Open 'index.html' with your
+favorite browser.
