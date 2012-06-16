@@ -62,12 +62,12 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     std::string input_file_name = itpp::mxArray2string(input[2]);
     
     // ------------------ Start of routine ---------------------------
-    Statistical_Tests test(nb_bits);
-    test.set_input_file_name(input_file_name.c_str());
+    StatisticalTests test(nb_bits);
+    test.setInputFileName(input_file_name.c_str());
     double *P_value;
     
-    test.set_binary_vector(offset_bytes);
-    P_value = test.Frequency();
+    test.setBinaryVector(offset_bytes);
+    P_value = test.frequency();
     if (P_value)
     {
         output[0] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #0
@@ -81,7 +81,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[0]);
     }
     
-    P_value = test.BlockFrequency();
+    P_value = test.blockFrequency();
     if (P_value)
     {
         output[1] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #1
@@ -95,7 +95,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[1]);
     }
     
-    P_value = test.CumulativeSums();
+    P_value = test.cumulativeSums();
     if (P_value)
     {
         output[2] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #2
@@ -109,7 +109,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[2]);
     }
     
-    P_value = test.Runs();
+    P_value = test.runs();
     if (P_value)
     {
         output[3] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #3
@@ -123,7 +123,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[3]);
     }
     
-    P_value = test.LongestRunOfOnes();
+    P_value = test.longestRunOfOnes();
     if (P_value)
     {
         output[4] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #4
@@ -137,7 +137,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[4]);
     }
     
-    P_value = test.Rank();
+    P_value = test.rank();
     if (P_value)
     {
         output[5] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #5
@@ -151,7 +151,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[5]);
     }
     
-    P_value = test.DiscreteFourierTransform();
+    P_value = test.discreteFourierTransform();
     if (P_value)
     {
         output[6] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #6
@@ -165,7 +165,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[6]);
     }
     
-    P_value = test.NonOverlappingTemplateMatchings();
+    P_value = test.nonOverlappingTemplateMatchings();
     if (P_value)
     {
         output[7] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #7
@@ -179,7 +179,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[7]);
     }
     
-    P_value = test.OverlappingTemplateMatchings();
+    P_value = test.overlappingTemplateMatchings();
     if (P_value)
     {
         output[8] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #8
@@ -193,7 +193,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[8]);
     }
     
-    P_value = test.Universal();
+    P_value = test.universal();
     if (P_value)
     {
         output[9] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #9
@@ -207,7 +207,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[9]);
     }
     
-    P_value = test.ApproximateEntropy();
+    P_value = test.approximateEntropy();
     if (P_value)
     {
         output[10] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #10
@@ -221,7 +221,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[10]);
     }
     
-    P_value = test.RandomExcursions();
+    P_value = test.randomExcursions();
     if (P_value)
     {
         output[11] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #11
@@ -235,7 +235,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[11]);
     }
     
-    P_value = test.RandomExcursionsVariant();
+    P_value = test.randomExcursionsVariant();
     if (P_value)
     {
         output[12] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #12
@@ -249,7 +249,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[12]);
     }
     
-    P_value = test.Serial();
+    P_value = test.serial();
     if (P_value)
     {
         output[13] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #13
@@ -263,7 +263,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[13]);
     }
     
-    P_value = test.LempelZivCompression();
+    P_value = test.lempelZivCompression();
     if (P_value)
     {
         output[14] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #14
@@ -277,7 +277,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
         itpp::double2mxArray(0.0, output[14]);
     }
     
-    P_value = test.LinearComplexity();
+    P_value = test.linearComplexity();
     if (P_value)
     {
         output[15] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #15

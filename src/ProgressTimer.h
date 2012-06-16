@@ -30,19 +30,15 @@ int main(void)
 #include <iostream>
 #include <iomanip>
 
-namespace tr
-{
-
-class Progress_Timer //shows simulation progress and remaining time
+class ProgressTimer //shows simulation progress and remaining time
 {
 public:
 	//! Creates a new timer. Sets max_it to zero.
-	Progress_Timer()
-	{
-		max_it = 0.0;
-	};
+	ProgressTimer():
+		max_it(0.0)
+    {}
 	//! Shows progress and remaining time using real numbers as input (percent should vary from 0 to 1)
-	void progress(const double &percent = 0.0)
+	void progress(double percent = 0.0)
 	{
 	    if(percent==0.0)
 	    {
@@ -70,7 +66,7 @@ public:
 	    }
 	};
 	//! Sets maximum number of iterations
-	void set_max(const int max)//set maximum number of iterations
+	void setMax(const int max)//set maximum number of iterations
 	{
 		max_it=(double)max;
 	};
@@ -80,7 +76,7 @@ public:
 		progress((double(iteration))/max_it);
 	};
 	//! Prints the elapsed time in a human readable format
-	void toc_print(void)
+	void tocPrint(void)
 	{
 		std::cout << "Elapsed time = ";
 		sec2human(double(elapsed_time));
@@ -117,7 +113,5 @@ private:
 		}
 	};
 };
-
-}//namespace tr
 
 #endif
