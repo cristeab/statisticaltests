@@ -38,10 +38,13 @@
  * 
  * \section label_usage Usage
  * In order to use StatisticalTests class, the GSL must be installed.
- * For example, assuming that the GSL is installed in your path, the compilation
- * command used on an Athlon64 machine is:
+ * For example, assuming that the GSL is installed in your path, the commands
+ * used to generate the binary are (see for further details README.md):
  * 
- *  g++ -Wall -O3 -pipe -march=athlon64 -lgsl nist.cpp -o nist
+ *  mkdir build
+ *  cd build
+ *  cmake ..
+ *  make
  * 
  * \section label_interface Matlab interface
  * It is possible to call StatisticalTests class member functions from Matlab
@@ -53,7 +56,7 @@
  *  
  * The compilation command for the interface function is: 
  * 
- * mex -lgsl C_test.cpp
+ * mex -lgsl src/StatisticalTests.cpp src/c_statisticaltests.cpp
  */
 
 /// Statistical Tests class

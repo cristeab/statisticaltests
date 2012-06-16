@@ -70,7 +70,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.frequency();
     if (P_value)
     {
-        output[0] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #0
+        output[0] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #0
         itpp::Cvec2mxArray(P_value, output[0]);// Convert the IT++ format to Matlab format for output #0
         delete[] P_value;
     }
@@ -84,7 +84,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.blockFrequency();
     if (P_value)
     {
-        output[1] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #1
+        output[1] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #1
         itpp::Cvec2mxArray(P_value, output[1]);// Convert the IT++ format to Matlab format for output #1
         delete[] P_value;
     }
@@ -98,7 +98,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.cumulativeSums();
     if (P_value)
     {
-        output[2] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #2
+        output[2] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #2
         itpp::Cvec2mxArray(P_value, output[2]);// Convert the IT++ format to Matlab format for output #2
         delete[] P_value;
     }
@@ -112,7 +112,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.runs();
     if (P_value)
     {
-        output[3] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #3
+        output[3] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #3
         itpp::Cvec2mxArray(P_value, output[3]);// Convert the IT++ format to Matlab format for output #3
         delete[] P_value;
     }
@@ -126,7 +126,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.longestRunOfOnes();
     if (P_value)
     {
-        output[4] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #4
+        output[4] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #4
         itpp::Cvec2mxArray(P_value, output[4]);// Convert the IT++ format to Matlab format for output #4
         delete[] P_value;
     }
@@ -140,7 +140,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.rank();
     if (P_value)
     {
-        output[5] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #5
+        output[5] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #5
         itpp::Cvec2mxArray(P_value, output[5]);// Convert the IT++ format to Matlab format for output #5
         delete[] P_value;
     }
@@ -154,7 +154,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.discreteFourierTransform();
     if (P_value)
     {
-        output[6] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #6
+        output[6] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #6
         itpp::Cvec2mxArray(P_value, output[6]);// Convert the IT++ format to Matlab format for output #6
         delete[] P_value;
     }
@@ -168,7 +168,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.nonOverlappingTemplateMatchings();
     if (P_value)
     {
-        output[7] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #7
+        output[7] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #7
         itpp::Cvec2mxArray(P_value, output[7]);// Convert the IT++ format to Matlab format for output #7
         delete[] P_value;
     }
@@ -182,7 +182,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.overlappingTemplateMatchings();
     if (P_value)
     {
-        output[8] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #8
+        output[8] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #8
         itpp::Cvec2mxArray(P_value, output[8]);// Convert the IT++ format to Matlab format for output #8
         delete[] P_value;
     }
@@ -196,7 +196,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.universal();
     if (P_value)
     {
-        output[9] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #9
+        output[9] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #9
         itpp::Cvec2mxArray(P_value, output[9]);// Convert the IT++ format to Matlab format for output #9
         delete[] P_value;
     }
@@ -210,7 +210,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.approximateEntropy();
     if (P_value)
     {
-        output[10] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #10
+        output[10] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #10
         itpp::Cvec2mxArray(P_value, output[10]);// Convert the IT++ format to Matlab format for output #10
         delete[] P_value;
     }
@@ -224,7 +224,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.randomExcursions();
     if (P_value)
     {
-        output[11] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #11
+        output[11] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #11
         itpp::Cvec2mxArray(P_value, output[11]);// Convert the IT++ format to Matlab format for output #11
         delete[] P_value;
     }
@@ -238,7 +238,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.randomExcursionsVariant();
     if (P_value)
     {
-        output[12] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #12
+        output[12] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #12
         itpp::Cvec2mxArray(P_value, output[12]);// Convert the IT++ format to Matlab format for output #12
         delete[] P_value;
     }
@@ -252,7 +252,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.serial();
     if (P_value)
     {
-        output[13] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #13
+        output[13] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #13
         itpp::Cvec2mxArray(P_value, output[13]);// Convert the IT++ format to Matlab format for output #13
         delete[] P_value;
     }
@@ -266,7 +266,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.lempelZivCompression();
     if (P_value)
     {
-        output[14] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #14
+        output[14] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #14
         itpp::Cvec2mxArray(P_value, output[14]);// Convert the IT++ format to Matlab format for output #14
         delete[] P_value;
     }
@@ -280,7 +280,7 @@ void mexFunction(int n_output, mxArray *output[], int n_input, const mxArray *in
     P_value = test.linearComplexity();
     if (P_value)
     {
-        output[15] = mxCreateDoubleMatrix(1, test.get_nb_P_values(), mxREAL);// Create vector output #15
+        output[15] = mxCreateDoubleMatrix(1, test.getNbPValues(), mxREAL);// Create vector output #15
         itpp::Cvec2mxArray(P_value, output[15]);// Convert the IT++ format to Matlab format for output #15
         delete[] P_value;
     }
