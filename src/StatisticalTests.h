@@ -4,7 +4,7 @@
  *
  * \author Bogdan Cristea
  * \date June 16, 2012
- * \version 1.1
+ * \version 1.2
  * 
  * \section Description
  * The Statistical Tests Suite was proposed by the National Institute of Standards
